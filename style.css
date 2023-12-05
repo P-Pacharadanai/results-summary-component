@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  position: relative;
+  /* background-color: white; */
+  z-index: 999;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-cont {
+  display: flex;
+  width: 620px;
+  height: 430px;
+  box-shadow: 5px 15px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+}
+
+.result-info {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+  border-radius: 30px;
+  padding: 30px 50px 50px 50px;
+}
+
+.result-info-title {
+  font-weight: 600;
+  color: hsl(221, 100%, 96%, 0.8);
+  /* margin-bottom: 35px; */
+}
+
+.result-info-score {
+  display: flex;
+  width: 170px;
+  height: 170px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  border-radius: 100%;
+  background: linear-gradient(to top, hsla(241, 72%, 46%, 0), hsla(256, 72%, 46%, 1));
+}
+
+.result-info-score h3 {
+  font-size: 3.8rem;
+  font-weight: 800;
+}
+
+.result-info-score p {
+  font-size: 0.9rem;
+  color: hsl(221, 100%, 96%, 0.4);
+  font-weight: 500;
+}
+
+.result-info-detail h3 {
+  font-size: 1.5rem;
+}
+
+.result-info-detail p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: hsl(221, 100%, 96%, 0.7);
+  margin-top: 12px;
+}
+
+.result-summary {
+  width: 50%;
+  padding: 30px;
+  color: hsl(224, 30%, 27%);
+}
+
+.result-summary-title {
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.list-score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 13px 15px;
+  margin-bottom: 13px;
+  border-radius: 8px;
+}
+
+.list-score .type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.list-score img {
+  width: 16px;
+  height: auto;
+}
+
+.list-score .score span {
+  color: hsl(224, 30%, 27%, 0.5);
+}
+
+.reaction {
+  background-color: hsl(0, 100%, 67%, 0.1);
+}
+
+.reaction .type {
+  color: hsl(0, 100%, 67%, 0.8);
+}
+
+.memory {
+  background-color: hsl(39, 100%, 56%, 0.1);
+}
+
+.memory .type {
+  color: hsl(39, 100%, 56%, 0.8);
+}
+
+.verbal {
+  background-color: hsl(166, 100%, 37%, 0.1);
+}
+
+.verbal .type {
+  color: hsl(166, 100%, 37%, 0.8);
+}
+
+.visual {
+  background-color: hsl(234, 85%, 45%, 0.1);
+}
+
+.visual .type {
+  color: hsl(234, 85%, 45%, 0.8);
+}
+
+.result-summary-btn {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background-color: hsl(224, 30%, 27%);
+  overflow: hidden;
+  /* outline: 10px solid rgba(0, 0, 0, 0.1);
+  outline-offset: -10px; */
+  /* box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3); */
+}
+
+.result-summary-btn a {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0px;
+  font-size: 1rem;
+  color: hsl(221, 100%, 96%);
+}
+
+.result-summary-btn :hover {
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(to top, hsla(241, 81%, 54%), hsla(252, 100%, 67%));
+  outline: 1px solid red;
+}
+
+.result-summary-btn :active {
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.attribution {
+  position: absolute;
+  margin: 15px;
+  font-size: 11px;
+  text-align: center;
+  right: 0;
+  bottom: 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: 1px solid red; */
+    z-index: -1;
+  }
+
+  .result-cont {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    box-shadow: none;
+  }
+
+  .result-info {
+    width: 100%;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .result-summary {
+    width: 100%;
+  }
+
+  .attribution {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 11px;
+  }
+}
